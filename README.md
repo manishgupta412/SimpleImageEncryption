@@ -1,50 +1,64 @@
-🖼️ Simple Image Encryption Tool
-🔍 Overview
+# 🖼️ Simple Image Encryption Tool
 
-This project is a Python-based image encryption and decryption tool that secures images using pixel-wise XOR manipulation.
-By applying a numeric key to each pixel’s RGB values, the tool scrambles the image into an unreadable form — and then restores it using the same key.
+## 🔍 Overview
 
-It’s a simple yet powerful demonstration of basic image cryptography, ideal for learning, mini-projects, or research experiments.
+This project is a **Python-based image encryption and decryption tool** that secures images using **pixel-wise XOR manipulation**.
+By applying a numeric key to each pixel’s RGB values, the tool **scrambles** the image into an unreadable form — and then **restores** it using the same key.
 
-✨ Features
+It’s a simple yet powerful demonstration of **basic image cryptography**, ideal for **learning, mini-projects, or research experiments**.
 
-🔒 Encrypts images using pixel-wise XOR operation
+---
 
-🔓 Decrypts images back to their original state
+## ✨ Features
 
-🧩 Works with all popular formats — PNG, JPEG, etc.
+* 🔒 Encrypts images using **pixel-wise XOR** operation
+* 🔓 Decrypts images back to their **original state**
+* 🧩 Works with all popular formats — **PNG**, **JPEG**, etc.
+* 💻 Simple **command-line interface** for easy operation
+* 🧠 Lightweight and great for learning cryptography basics
 
-💻 Simple command-line interface for easy operation
+---
 
-🧠 Lightweight and great for learning cryptography basics
+## ⚙️ How It Works
 
-⚙️ How It Works
+1. 🖼️ Loads the input image using the **Pillow (PIL)** library
+2. 🔢 Applies an **XOR operation** using the user-provided numeric key (0–255) to every pixel’s RGB channels
+3. 💾 Saves the resulting encrypted image
+4. ♻️ Applying the **same key again** decrypts the image back to its original form
 
-🖼️ Loads the input image using the Pillow (PIL) library
+---
 
-🔢 Applies an XOR operation using the user-provided numeric key (0–255) to every pixel’s RGB channels
+## 🧩 Installation
 
-💾 Saves the resulting encrypted image
+Make sure you have **Python 3.6+** installed. Then install dependencies with:
 
-♻️ Applying the same key again decrypts the image back to its original form
-
-🧩 Installation
-
-Make sure you have Python 3.6+ installed. Then install dependencies with:
-
+```bash
 pip install pillow
+```
 
-💻 Usage
-🔐 Encrypt an Image
+---
+
+## 💻 Usage
+
+### 🔐 Encrypt an Image
+
+```bash
 python pixel.py --mode encrypt --input images/image.jpg --output images/encrypted_image.jpg --key 123
+```
 
-🔓 Decrypt the Image
+### 🔓 Decrypt the Image
+
+```bash
 python pixel.py --mode decrypt --input images/encrypted_image.jpg --output images/decrypted_image.jpg --key 123
+```
 
+✅ Use the **same key** for both encryption and decryption.
 
-✅ Use the same key for both encryption and decryption.
+---
 
-📁 Folder Structure
+## 📁 Folder Structure
+
+```
 pixel.py                      # Main Python script
 requirements.txt              # Dependencies list
 images/
@@ -52,20 +66,33 @@ images/
     encrypted_image.jpg       # Encrypted output
     decrypted_image.jpg       # Decrypted output
 LICENSE                       # License file
+```
 
-🖼️ Example Images
-Stage	Description
-🧩 Original	image.jpg
-🔒 Encrypted	encrypted_image.jpg
-🔓 Decrypted	decrypted_image.jpg
-📜 License
+---
 
-This project is licensed under the MIT License.
+## 🖼️ Example Images
 
-📚 References
+| Stage        | Description           |
+| ------------ | --------------------- |
+| 🧩 Original  | `image.jpg`           |
+| 🔒 Encrypted | `encrypted_image.jpg` |
+| 🔓 Decrypted | `decrypted_image.jpg` |
 
-🧠 Pixel manipulation concepts for image encryption
+---
 
-🧰 Sample Python cryptography project templates
+## 📜 License
 
-✨ This README provides all necessary details for users and contributors. Feel free to personalize the author or add more references!
+This project is licensed under the **MIT License**.
+
+---
+
+## 📚 References
+
+* 🧠 Pixel manipulation concepts for image encryption
+* 🧰 Sample Python cryptography project templates
+
+---
+
+✨ *This README provides all necessary details for users and contributors. Feel free to personalize the author or add more references!*
+
+---
