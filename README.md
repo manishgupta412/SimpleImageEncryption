@@ -34,7 +34,7 @@ pip install pillow
 
 ---
 
-##Usage 🚀
+## Usage 🚀
 
 The main script is pixel.py.
 
@@ -51,7 +51,7 @@ python pixel.py --mode decrypt --input images/encrypted_image.png --output image
 
 ---
 
-##Folder Structure 📂
+## Folder Structure 📂
 
 pixel.py                      # Main Python script 🐍
 requirements.txt              # Dependencies list 📋
@@ -63,17 +63,17 @@ LICENSE                       # License file 📜
 
 ---
 
-##Example Images
+## Example Images
 
 Original: encrypted_image: decrypted_image:
 
 ---
 
-License 📄
+## License 📄
 MIT License
 
 ---
 
-References 📚
+## References 📚
 Pixel manipulation for image encryption
 Sample Python cryptography project templates
