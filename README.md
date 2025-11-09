@@ -1,84 +1,79 @@
-Simple Image Encryption Tool
-Overview
-This project is a Python-based image encryption tool that uses pixel-wise XOR manipulation to encrypt and decrypt images.
-By applying a numeric key to each pixel's RGB values, the tool obscures the image, and then restores it using the same key.
-It serves as a simple demonstration of basic image cryptography for learning and project purposes.
+# 🔒 Simple Image Encryption Tool 🖼️
 
-Features
+## Overview
 
+This project is a **Python-based image encryption tool** that uses **pixel-wise XOR manipulation** to encrypt and decrypt images. By applying a numeric key to each pixel's RGB values, the tool obscures the image, and then restores it using the same key. It serves as a simple demonstration of basic image cryptography for learning and project purposes. 💡
 
-Encrypts images using pixel-wise XOR operation
+---
 
+## Features ✨
 
-Decrypts images back to their original form
+* **Encrypts images** using pixel-wise XOR operation.
+* **Decrypts images** back to their original form (it's reversible!).
+* Works with common formats (**PNG, JPEG**).
+* **Command-line interface (CLI)** for easy operation.
+* Sample images provided for demonstration.
 
+---
 
-Works with common formats (PNG, JPEG)
+## How It Works ⚙️
 
+1.  Loads the input image using the **Pillow** library.
+2.  Applies the **XOR operation** ($\oplus$) with a key to each pixel's **RGB channels**.
+    * *Encryption/Decryption Formula (Concept):* $Pixel_{new} = Pixel_{original} \oplus Key$
+3.  Saves the result as an encrypted image.
+4.  Decryption is done by repeating XOR with the **same key**, restoring the original image because $(A \oplus K) \oplus K = A$.
 
-Command-line interface for easy operation
+---
 
+## Installation 💻
 
-Sample images provided for demonstration
+Make sure **Python 3.6+** is installed. Then install the necessary dependencies:
 
-
-
-How It Works
-
-
-Loads the input image using the Pillow library
-
-
-Applies XOR operation with a key to each pixel’s RGB channels
-
-
-Saves the result as an encrypted image
-
-
-Decryption is done by repeating XOR with the same key, restoring the original image
-
-
-
-Installation
-Make sure Python 3.6+ is installed. Then install dependencies using:
 pip install pillow
 
+---
 
-Usage
+##Usage 🚀
+
+The main script is pixel.py.
+
 Encrypt:
-python pixel.py --mode encrypt --input images/image.jpg --output images/encrypted_image.jpg --key 123
+Use the --mode encrypt flag.
 
+
+python pixel.py --mode encrypt --input images/image.png --output images/encrypted_image.png --key 123
 Decrypt:
-python pixel.py --mode decrypt --input images/encrypted_image.jpg --output images/decrypted_image.jpg --key 123
+Use the --mode decrypt flag with the exact same key.
 
 
-Folder Structure
-pixel.py                      # Main Python script  
-requirements.txt              # Dependencies list  
-images/  
-    image.jpg            # Original sample image  
-    encrypted_image.jpg  # Encrypted output  
-    decrypted_image.jpg  # Decrypted output  
-LICENSE                       # License file  
+python pixel.py --mode decrypt --input images/encrypted_image.png --output images/decrypted_image.png --key 123
 
+---
 
-Example Images
-Original: image.jpg
-Encrypted: encrypted_image.jpg
-Decrypted: decrypted_image.jpg
+##Folder Structure 📂
 
-License
+pixel.py                      # Main Python script 🐍
+requirements.txt              # Dependencies list 📋
+images/
+    image.png                 # Original sample image 🌟
+    encrypted_image.png       # Encrypted output 🚫
+    decrypted_image.png       # Decrypted output ✅
+LICENSE                       # License file 📜
+
+---
+
+##Example Images
+
+Original: encrypted_image: decrypted_image:
+
+---
+
+License 📄
 MIT License
 
-References
+---
 
-
+References 📚
 Pixel manipulation for image encryption
-
-
 Sample Python cryptography project templates
-
-
-
-This README provides all necessary details for users and contributors.
-Feel free to personalize the author/contact section or add more references!
